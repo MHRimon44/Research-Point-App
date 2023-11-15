@@ -65,7 +65,7 @@ class _ArticleCardState extends State<ArticleCard> {
                     const EdgeInsets.symmetric(vertical: 0.0, horizontal: 8.0),
                 child: Text(
                   text,
-                  style: Theme.of(context).textTheme.subtitle1,
+                  style: Theme.of(context).textTheme.titleMedium,
                 ),
               ),
             )
@@ -217,7 +217,7 @@ class _ArticleCardState extends State<ArticleCard> {
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: Text(
                   widget.article.title.toString(),
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
               ),
               // Year and Language Row

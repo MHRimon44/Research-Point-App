@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:researchcore/models/core_api_response.dart';
-import 'package:researchcore/utils/config_util.dart';
+import 'package:researchcore/utils/api-key.dart';
 
 class CoreApiClient {
   static const limit = 50;
@@ -15,7 +15,7 @@ class CoreApiClient {
       final headers = {
         HttpHeaders.contentTypeHeader: 'application/json',
         HttpHeaders.authorizationHeader:
-            'Bearer ${ConfigUtil.rotateAuthKey()}', // for local development put your own key,
+            'Bearer $apiKey', // for local development put your own key,
         HttpHeaders.userAgentHeader: 'PostmanRuntime/7.29.0'
       };
 
@@ -34,8 +34,6 @@ class CoreApiClient {
         data: jsonEncode(payload),
       );
 
-      print('fetching data... ' + response.statusCode.toString());
-
       if (response.statusCode == 200) {
         return CoreApiResponse.fromJson(response.data);
       } else {
@@ -43,7 +41,7 @@ class CoreApiClient {
         throw Exception(
             'Non 200 Status Code ${response.statusCode.toString()}');
       }
-    } on Exception catch (e) {
+    } on Exception {
       // catch no internet exception and show appropriate error message TODO:
       throw Exception("Error fetching data from the API");
     }
@@ -53,9 +51,6 @@ class CoreApiClient {
     // change this to false to mock errors
     if (true) {
       return CoreApiResponse.fromJson(mockResponseData());
-    } else {
-      // mock error
-      throw Exception('Error Fetching Data from the API!');
     }
   }
 

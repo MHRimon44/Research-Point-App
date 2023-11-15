@@ -133,15 +133,15 @@ class HomeScreenState extends State<HomeScreen> {
             ),
           ),
           Text(
-            "Research Core",
-            style: Theme.of(context).textTheme.headline4,
+            "Research Zone",
+            style: Theme.of(context).textTheme.headlineMedium,
           ),
           Text(
             "Search for Open Access Research Papers",
             softWrap: true,
             style: Theme.of(context)
                 .textTheme
-                .subtitle2
+                .titleSmall
                 ?.copyWith(fontStyle: FontStyle.italic),
           )
         ],
@@ -170,8 +170,7 @@ class HomeScreenState extends State<HomeScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                Text('Search Term',
-                    style: Theme.of(context).textTheme.subtitle1),
+                Text('Search', style: Theme.of(context).textTheme.titleMedium),
               ],
             ),
             const SizedBox(
@@ -184,8 +183,8 @@ class HomeScreenState extends State<HomeScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                Text('Choose Year Range',
-                    style: Theme.of(context).textTheme.subtitle1),
+                Text('Choose Paper Year Range',
+                    style: Theme.of(context).textTheme.titleMedium),
               ],
             ),
             const SizedBox(
@@ -198,7 +197,7 @@ class HomeScreenState extends State<HomeScreen> {
                     '( Selected: ${_currentRangeValues.start.toInt().toString()} - ${_currentRangeValues.end.toInt().toString()} )',
                     style: Theme.of(context)
                         .textTheme
-                        .caption
+                        .bodySmall
                         ?.copyWith(fontWeight: FontWeight.bold)),
               ],
             ),
@@ -212,7 +211,7 @@ class HomeScreenState extends State<HomeScreen> {
                   _lowYear.toInt().toString(),
                   style: Theme.of(context)
                       .textTheme
-                      .caption
+                      .bodySmall
                       ?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 Expanded(flex: 2, child: _rangeSlider(context)),
@@ -221,7 +220,7 @@ class HomeScreenState extends State<HomeScreen> {
                   DateTime.now().year.toString(),
                   style: Theme.of(context)
                       .textTheme
-                      .caption
+                      .bodySmall
                       ?.copyWith(fontWeight: FontWeight.bold),
                 ),
               ],
@@ -239,11 +238,12 @@ class HomeScreenState extends State<HomeScreen> {
   Widget _searchButton(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
-      height: 64.0,
+      height: 55.0,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          elevation: 0.0,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(64.0),
+            borderRadius: BorderRadius.circular(10.0),
           ),
         ),
         onPressed: _handleSearch,
@@ -252,7 +252,7 @@ class HomeScreenState extends State<HomeScreen> {
           textAlign: TextAlign.center,
           style: Theme.of(context)
               .textTheme
-              .headline3
+              .displaySmall
               ?.copyWith(color: Colors.white, fontSize: 24.0),
         ),
       ),

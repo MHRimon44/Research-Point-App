@@ -31,15 +31,17 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
     }
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 16.0,
+      ),
       child: Row(
         children: [
           Text(
             'Showing ${_offset + 1} - ${_offset + CoreApiClient.limit} of $totalHits',
-            style: Theme.of(context).textTheme.subtitle1,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
           const SizedBox(
-            width: 24.0,
+            width: 10.0,
           ),
           IconButton(
             iconSize: 32.0,
@@ -49,9 +51,6 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
               });
             },
             icon: const Icon(Icons.arrow_circle_left_outlined),
-          ),
-          const SizedBox(
-            width: 8.0,
           ),
           IconButton(
             iconSize: 32.0,
@@ -84,7 +83,6 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
             return const Center(child: CircularProgressIndicator());
           } else {
             if (snapshot.hasError) {
-              // TODO: Probably a button to re-fetch??
               return const FullScreenInfo(
                   iconName: Icons.error_outline_rounded,
                   title: 'Error! Please Try Again.',
@@ -92,7 +90,6 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
             } else {
               final articles = snapshot.data?.articles ?? [];
               if (articles.isEmpty) {
-                // TODO: provide a button to go to home to search again
                 return FullScreenInfo(
                     iconName: Icons.hourglass_empty,
                     title: 'No Articles Found for ${widget.searchText}!',

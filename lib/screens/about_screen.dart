@@ -56,7 +56,7 @@ class AboutScreen extends StatelessWidget {
                         children: <Widget>[
                           Text(
                             'Powered By',
-                            style: Theme.of(context).textTheme.headline6,
+                            style: Theme.of(context).textTheme.titleLarge,
                           ),
                           TextButton(
                             onPressed: () {
@@ -66,7 +66,7 @@ class AboutScreen extends StatelessWidget {
                               'Core.ac.uk',
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1
+                                  .titleMedium
                                   ?.copyWith(
                                       fontWeight: FontWeight.bold,
                                       color: ThemeUtil.primaryColor),
@@ -75,7 +75,7 @@ class AboutScreen extends StatelessWidget {
                           Text(
                             "Research core is an open sourced app developed with the aim to ease the search for open access research papers. \n \n All the data in the this app are retrieved from core.ac.uk. Core is the world’s largest collection of open access research papers. ",
                             textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.subtitle1,
+                            style: Theme.of(context).textTheme.titleMedium,
                           )
                         ],
                       ),
@@ -86,60 +86,6 @@ class AboutScreen extends StatelessWidget {
             ),
           ),
           // Designed By Card
-          Card(
-            margin: const EdgeInsets.symmetric(vertical: 4.0),
-            shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.zero,
-            ),
-            elevation: 2.0,
-            child: Container(
-              padding: const EdgeInsets.all(16.0),
-              width: MediaQuery.of(context).size.width,
-              child: Column(
-                children: <Widget>[
-                  RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(children: <TextSpan>[
-                      TextSpan(
-                          text: "Developed By \n",
-                          style: Theme.of(context).textTheme.headline6),
-                      TextSpan(
-                        text: "99darshan ",
-                        style: Theme.of(context).textTheme.subtitle1,
-                      ),
-                    ]),
-                  ),
-                  const SizedBox(
-                    height: 16.0,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
-                      ElevatedButton(
-                        onPressed: () {
-                          _launchUrl(
-                              'https://github.com/99darshan/research-core');
-                        },
-                        child: const Text('Github'),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          _launchUrl('https://twitter.com/99darshan');
-                        },
-                        child: const Text('Twitter'),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          _launchUrl('https://www.linkedin.com/in/99darshan/');
-                        },
-                        child: const Text('LinkedIn'),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
-          ),
         ],
       ),
     );

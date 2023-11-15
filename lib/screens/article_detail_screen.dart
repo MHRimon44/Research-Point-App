@@ -34,13 +34,13 @@ class ArticleDetailScreen extends StatelessWidget {
                   children: [
                     Text(
                       'Abstract',
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
                     const SizedBox(
                       height: 8.0,
                     ),
                     Text('${article.abstract}',
-                        style: Theme.of(context).textTheme.subtitle1)
+                        style: Theme.of(context).textTheme.titleMedium)
                   ],
                 ),
               ),

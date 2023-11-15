@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:researchcore/providers/favorites_provider.dart';
 import 'package:researchcore/screens/about_screen.dart';
@@ -8,6 +9,8 @@ import 'package:researchcore/screens/home_screen.dart';
 import 'package:researchcore/utils/theme_util.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(statusBarColor: ThemeUtil.primaryColor));
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider<FavoritesProvider>(
         create: (_) => FavoritesProvider())
@@ -39,7 +42,7 @@ class MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Research Core',
+        title: 'Research Zone',
         theme: ThemeUtil.defaultTheme(),
         home: Scaffold(
           body: SafeArea(

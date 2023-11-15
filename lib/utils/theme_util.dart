@@ -1,37 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class ThemeUtil {
-  static const MaterialColor primaryColor = Colors.pink;
-  static const secondaryColor = Colors.pink;
+  static const MaterialColor primaryColor = Colors.indigo;
+  static const secondaryColor = Colors.indigoAccent;
   static const primaryTextColor = Color(0xFF3b2b28);
 
   static ThemeData defaultTheme() {
     return ThemeData(
       fontFamily: 'Poppins',
       primarySwatch: ThemeUtil.primaryColor,
+      appBarTheme: const AppBarTheme(
+          systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: ThemeUtil.primaryColor,
+      )),
       primaryColor: ThemeUtil.primaryColor,
-      // https://api.flutter.dev/flutter/material/TextTheme-class.html
       textTheme: const TextTheme(
-        headline4: TextStyle(
+        headlineMedium: TextStyle(
           color: ThemeUtil.primaryColor,
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w900,
         ),
-        headline6: TextStyle(
+        titleLarge: TextStyle(
           color: ThemeUtil.primaryTextColor,
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w900,
         ),
-        subtitle1: TextStyle(
+        titleMedium: TextStyle(
             color: ThemeUtil.primaryTextColor,
             fontWeight: FontWeight.w400,
             fontFamily: 'Poppins'),
-        subtitle2: TextStyle(
+        titleSmall: TextStyle(
           color: ThemeUtil.primaryTextColor,
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w200,
         ),
-        caption: TextStyle(
+        bodySmall: TextStyle(
           color: ThemeUtil.primaryTextColor,
           fontFamily: 'Poppins',
         ),
