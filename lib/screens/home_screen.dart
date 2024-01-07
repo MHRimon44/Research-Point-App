@@ -133,7 +133,7 @@ class HomeScreenState extends State<HomeScreen> {
             ),
           ),
           Text(
-            "Research Zone",
+            "Research Point",
             style: Theme.of(context).textTheme.headlineMedium,
           ),
           Text(

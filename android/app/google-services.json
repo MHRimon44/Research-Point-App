@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "709426415490",
+    "project_id": "research-point-4aee8",
+    "storage_bucket": "research-point-4aee8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709426415490:android:2fe7e63c87cdf59035f19b",
+        "android_client_info": {
+          "package_name": "com.example.research_point"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBX8ZobxcT4LVUlShp8IyEN3CONyXA1Gn8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

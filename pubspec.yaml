@@ -53,6 +53,9 @@ dev_dependencies:
   dio: ^4.0.6
   url_launcher: ^6.1.6
   flutter_launcher_icons: ^0.10.0
+  lottie: ^2.7.0
+  cloud_firestore: ^4.13.5
+  firebase_auth: ^4.15.2
 
 
 flutter_icons:

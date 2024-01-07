@@ -1,8 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:researchcore/components/full_screen_info.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+
+import '../components/full_screen_info.dart';
 
 class PdfViewScreen extends StatefulWidget {
   final String? pdfUrl;

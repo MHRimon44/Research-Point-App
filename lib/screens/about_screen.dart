@@ -73,11 +73,7 @@ class AboutScreen extends StatelessWidget {
                                       color: ThemeUtil.primaryColor),
                             ),
                           ),
-                          Text(
-                            "Research core is an open sourced app developed with the aim to ease the search for open access research papers. \n \n All the data in the this app are retrieved from core.ac.uk. Core is the world’s largest collection of open access research papers. ",
-                            textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.titleMedium,
-                          )
+                          
                         ],
                       ),
                     )

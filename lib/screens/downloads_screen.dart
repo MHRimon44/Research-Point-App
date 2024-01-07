@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:researchcore/components/full_screen_info.dart';
-import 'package:researchcore/screens/pdf_view_screen.dart';
-import 'package:researchcore/services/download_service.dart';
-import 'package:researchcore/utils/theme_util.dart';
+import 'package:research_point/screens/pdf_view_screen.dart';
 
+import '../components/full_screen_info.dart';
+import '../services/download_service.dart';
 import '../utils/file_util.dart';
+import '../utils/theme_util.dart';
 
 class DownloadsScreen extends StatefulWidget {
   const DownloadsScreen({Key? key}) : super(key: key);
